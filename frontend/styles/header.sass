@@ -2,19 +2,25 @@
   background: $header-background-color
   box-sizing: border-box
   display: flex
-  height: 64px
+  height: $header-height
   justify-content: space-between
   padding: 0 16px
+
+  @media screen and (max-width: $drawer-breakpoint - 1)
+    justify-content: flex-start
 
 .header__logo
   background: #333
   flex-shrink: 0
-  height: 64px
+  height: $header-height
   margin-right: 16px
   width: 96px
 
 .header__navigation-list
   display: flex
+
+  @media screen and (max-width: $drawer-breakpoint - 1)
+    display: none
 
 .header__navigation-item
   display: inline-block
@@ -29,9 +35,8 @@
 .header__navigation-link
   color: $header-navigation-link-color
   display: inline-block
-  cursor: pointer
   font-weight: 300
-  line-height: 64px
+  line-height: $header-height
   padding: 0 16px
   position: relative
   text-decoration: none
@@ -45,7 +50,7 @@
     background: $header-navigation-link-color
     bottom: 0
     content: ''
-    height: 2px
+    height: 4px
     left: 0
     display: none
     position: absolute
