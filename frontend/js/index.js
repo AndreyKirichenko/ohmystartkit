@@ -1,2 +1,1 @@
-let header = document.querySelectorAll('header');
-console.log(header);
+console.log('Hello, World!');
