@@ -25,9 +25,9 @@ function watch (type) {
   return function () {
     gulp.watch(
       [
-        './frontend/templates/*.jade',
-        './frontend/js/*.js',
-        './frontend/styles/*.scss'
+        './frontend/templates/*',
+        './frontend/js/*',
+        './frontend/styles/*'
       ],
       [type + '-build']);
   };

@@ -1,0 +1,56 @@
+.header
+  background: $header-background-color
+  box-sizing: border-box
+  display: flex
+  height: 64px
+  justify-content: space-between
+  padding: 0 16px
+
+.header__logo
+  background: #333
+  flex-shrink: 0
+  height: 64px
+  margin-right: 16px
+  width: 96px
+
+.header__navigation-list
+  display: flex
+
+.header__navigation-item
+  display: inline-block
+  margin: 0 16px
+
+  &:first-child
+    margin-left: 0
+
+  &:last-child
+    margin-right: 0
+
+.header__navigation-link
+  color: $header-navigation-link-color
+  display: inline-block
+  cursor: pointer
+  font-weight: 300
+  line-height: 64px
+  padding: 0 16px
+  position: relative
+  text-decoration: none
+  text-transform: uppercase
+
+  &:hover
+    &:before
+      display: block
+
+  &:before
+    background: $header-navigation-link-color
+    bottom: 0
+    content: ''
+    height: 2px
+    left: 0
+    display: none
+    position: absolute
+    right: 0
+
+.header__navigation-link_active
+  &:before
+    display: block
