@@ -1,0 +1,74 @@
+.drawer
+  @media screen and (min-width: $drawer-breakpoint)
+    display: none
+
+.drawer__checkbox
+  display: none
+
+.drawer__handler
+  height: $header-height
+  width: $header-height + 32px
+
+  &:before,
+  &:after
+    position: absolute
+
+  &:before
+    background: rgba(0, 0, 0, 0.33)
+    content: ''
+    height: 0
+    opacity: 0
+    transition: opacity .25s ease
+    width: 0
+
+  &:after
+    display: inline-block
+    content: ''
+    line-height: $header-height
+    z-index: 2
+
+    width: 30px
+    height: 30px
+    background: #ccc
+    left: 16px
+    top: 16px
+
+  .drawer__checkbox:checked ~ &
+    &:before
+      height: 100%
+      opacity: 1
+      width: 100vw
+
+.drawer__navigation
+  background: $drawer-navigation-background-color
+  height: 100%
+  left: -$drawer-width
+  position: absolute
+  transform: translate3d(0, 0, 0)
+  transition: transform .25s ease
+  width: $drawer-width
+
+  .drawer__checkbox:checked ~ &
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.33)
+    transform: translate3d($drawer-width, 0, 0)
+
+.drawer__navigation-list
+  margin-top: 64px
+  overflow-x: hidden
+  overflow-y: auto
+
+.drawer__navigation-link
+  color: $drawer-navigation-link-color
+  display: block
+  font-size: 14px
+  line-height: 56px
+  overflow: hidden
+  padding: 0 16px
+  text-overflow: ellipsis
+  text-decoration: none
+  text-transform: uppercase
+  white-space: nowrap
+
+  &:hover
+    background: $drawer-navigation-link-hover-background-color
+    color: $drawer-navigation-link-hover-color
