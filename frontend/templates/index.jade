@@ -1,19 +1,21 @@
-head
-  meta(charset="UTF-8")
-  meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
-  title title
-  link(rel="stylesheet", href="/css/index.css")
-  script(async="true", src="/js/index.js")
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    title title
+    link(rel="stylesheet", href="/css/index.css")
+    script(async="true", src="/js/index.js")
 
-body
-  .common-wrapper
-    include drawer
+  body
+    .common-wrapper
+      include drawer
 
-    include header
+      include header
 
-    .content
-      .content__main
-        main.main
+      .content
+        .content__main
+          main.main
 
-      .content__footer
-        include footer
+        .content__footer
+          include footer
