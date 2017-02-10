@@ -6,38 +6,34 @@
   display: none
 
 .drawer__handler
-  height: $header-height
-  width: $header-height + 32px
-
-  &:before,
-  &:after
-    position: absolute
-
   &:before
     background: rgba(0, 0, 0, 0.33)
     content: ''
     height: 0
     opacity: 0
+    position: absolute
     transition: opacity .25s ease
     width: 0
-
-  &:after
-    display: inline-block
-    content: ''
-    line-height: $header-height
-    z-index: 2
-
-    width: 30px
-    height: 30px
-    background: #ccc
-    left: 16px
-    top: 16px
 
   .drawer__checkbox:checked ~ &
     &:before
       height: 100%
       opacity: 1
       width: 100vw
+
+.drawer__hamburger
+  height: $header-height
+  position: absolute
+  width: $header-height + 32px
+  z-index: 2
+
+.drawer__hamburger-icon
+  @include hamburger-icon
+  left: 16px
+  top: 22px
+
+  .drawer__checkbox:checked ~ .drawer__handler &
+    @include hamburger-icon-close
 
 .drawer__navigation
   background: $drawer-navigation-background-color
