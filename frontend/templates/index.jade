@@ -7,15 +7,17 @@ html
     link(rel="stylesheet", href="/css/index.css")
     script(async="true", src="/js/index.js")
 
-  body
-    .common-wrapper
-      include drawer
+  body.layout
+    .layout__outer-wrapper
+      .layout__drawer
+        include drawer
 
-      include header
+      .layout__header
+        include header
 
-      .content
-        .content__main
-          main.main
+      .layout__inner-wrapper
+        .layout__content
+          include page
 
-        .content__footer
+        .layout__footer
           include footer
