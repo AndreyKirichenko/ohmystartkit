@@ -1,4 +1,4 @@
-# ohmystartkit v.0.0.1
+# ohmystartkit v.0.1.0
 
 This is my start kit.
 
