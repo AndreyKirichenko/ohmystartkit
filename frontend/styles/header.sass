@@ -1,4 +1,5 @@
 .header
+  @include container
   background: $header-background-color
   box-sizing: border-box
   display: flex
@@ -14,8 +15,11 @@
   background: #333
   flex-shrink: 0
   height: $header-height
-  margin-right: 16px
+  margin-right: $gutter
   width: 96px
+
+  @media screen and (min-width: 1280px)
+    margin-left: $gutter / 2
 
 .header__navigation-list
   display: flex
@@ -23,9 +27,12 @@
   @media screen and (max-width: $drawer-breakpoint - 1)
     display: none
 
+  @media screen and (min-width: 1280px)
+    margin-right: $gutter / 2
+
 .header__navigation-item
   display: inline-block
-  margin: 0 16px
+  margin: 0 $gutter
 
   &:first-child
     margin-left: 0
@@ -38,7 +45,7 @@
   display: inline-block
   font-weight: 300
   line-height: $header-height
-  padding: 0 16px
+  padding: 0 $gutter
   position: relative
   text-decoration: none
   text-transform: uppercase

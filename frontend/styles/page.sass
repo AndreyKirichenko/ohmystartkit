@@ -1,0 +1,18 @@
+.page
+  position: relative
+
+.page__section
+  @include section
+  @include container
+  display: flex
+
+.page__main,
+.page__side
+  @include billet-space
+  flex-shrink: 0
+
+.page__main
+  flex-grow: 2
+
+.page__side
+  flex-grow: 1

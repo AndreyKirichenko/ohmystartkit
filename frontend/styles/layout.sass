@@ -1,11 +1,18 @@
-body
-  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif
-  font-size: 16px
-
-a
-  color: $link-color
-
-.common-wrapper
+.layout__outer-wrapper
   height: 100%
   position: absolute
   width: 100%
+
+.layout__header
+  height: $header-height
+
+.layout__inner-wrapper
+  align-items: stretch
+  display: flex
+  height: calc(100% - #{$header-height})
+  flex-flow: column nowrap
+  justify-content: space-between
+  overflow: auto
+
+.layout__page
+  flex-grow: 1
