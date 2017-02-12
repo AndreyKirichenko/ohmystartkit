@@ -1,5 +1,6 @@
 .page
   position: relative
+  overflow: hidden
 
 .page__section
   @include section
@@ -10,13 +11,21 @@
 .page__main,
 .page__side
   @include billet-space
+  box-sizing: border-box
   flex-shrink: 0
-
-  @media screen and (max-width: $drawer-breakpoint)
-    flex-basis: 100%
+  overflow: hidden
 
 .page__main
   flex-grow: 2
+  flex-basis: 66.666%
+
+  @media screen and (max-width: 768px)
+    flex-basis: 100%
+    flex-grow: 1
 
 .page__side
   flex-grow: 1
+  flex-basis: 33.333%
+
+  @media screen and (max-width: 768px)
+    flex-basis: 100%
