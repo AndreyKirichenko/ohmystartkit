@@ -5,11 +5,15 @@
   @include section
   @include container
   display: flex
+  flex-wrap: wrap
 
 .page__main,
 .page__side
   @include billet-space
   flex-shrink: 0
+
+  @media screen and (max-width: $drawer-breakpoint)
+    flex-basis: 100%
 
 .page__main
   flex-grow: 2
