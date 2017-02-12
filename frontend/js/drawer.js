@@ -6,6 +6,10 @@ const CLASS_NAMES = {
 };
 
 export default function Drawer() {
+  if (window.innerWidth >= 600) {
+    return;
+  }
+
   let checkbox = document.querySelector(CLASS_NAMES.DRAWER_CHECKBOX);
   let hitArea = document.querySelector(CLASS_NAMES.HIT_AREA);
 
@@ -23,11 +27,9 @@ export default function Drawer() {
 }
 
 function showDrawer(checkbox) {
-  console.log('showDrawer');
   checkbox.checked = true;
 }
 
 function hideDrawer(checkbox) {
-  console.log('hideDrawer');
   checkbox.checked = false;
 }
