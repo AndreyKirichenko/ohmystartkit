@@ -1,4 +1,6 @@
-This is template for online magazine.
+# ohmystartkit v.0.1.0
+
+This is my start kit.
 
 ## Command-line installation:
 
